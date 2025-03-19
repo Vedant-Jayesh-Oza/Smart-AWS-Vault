@@ -18,7 +18,3 @@ An intelligent, automated backup system for EC2 instances using EBS Snapshots.
 - HTML/CSS/JavaScript
 - Docker & Kubernetes
 
-## Getting Started
-
-AWS Setup Done, Frontend and Backend in Progress. See the documentation in the `docs` directory for AWS setup instructions.
-Project is in Progress, For AWS Setup, See the documentation in the `docs` directory for setup instructions.
