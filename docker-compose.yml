@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  backend:
+    build: ./webapp/backend
+    container_name: smartvault-backend
+    environment:
+      - COGNITO_REGION=${COGNITO_REGION}
+      - COGNITO_USERPOOL_ID=${COGNITO_USERPOOL_ID}
+      - COGNITO_APP_CLIENT_ID=${COGNITO_APP_CLIENT_ID}
+      - COGNITO_APP_CLIENT_SECRET=${COGNITO_APP_CLIENT_SECRET}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}
+    ports:
+      - "5050:5000"
+    volumes:
+      - ~/.aws:/root/.aws:ro
+
+  frontend:
+    build: ./webapp
+    container_name: smartvault-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
