@@ -20,4 +20,4 @@ An intelligent, automated backup system for EC2 instances using EBS Snapshots.
 
 ## Getting Started
 
-See the documentation in the `docs` directory for setup instructions.
+Project is in Progress, For AWS Setup, See the documentation in the `docs` directory for setup instructions.
